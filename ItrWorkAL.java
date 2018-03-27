@@ -1,3 +1,8 @@
+/*
+Alvin Ye and Joshua Weiner - Red Elephant
+APCS2 - pd08
+HW #26: DeIteratour
+2018 - 03 - 26
 /*****************************************************
  * class ItrWork -- skeleton
  * Allows for familiarization with iterators
