@@ -7,26 +7,26 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-public class ItrWorkAL 
+public class ItrWorkAL
 {
     //using FOREACH loop
     //returns a boolean to indicate whether key is present in L
-    public static boolean foundA( Integer key, List<Integer> L ) 
-    { 
-	
+    public static boolean foundA( Integer key, List<Integer> L )
+    {
+
 	for(Integer i : L){
 		if(i.equals(key)){
 			return true;
 		}
 	}
-	
+
 	return false;
     }
 
     //explicitly using an iterator
     //returns a boolean to indicate whether key is present in L
-    public static boolean foundB( Integer key, List<Integer> L ) 
-    { 
+    public static boolean foundB( Integer key, List<Integer> L )
+    {
 	Iterator<Integer> it = L.iterator();
 
 	while(it.hasNext()){
@@ -40,16 +40,21 @@ public class ItrWorkAL
 
     //using FOREACH loop
     //returns a list containing the odd numbers in L
-    public static List<Integer> oddsA( List<Integer> L ) 
-    { 
-
-	return L; 
+    public static List<Integer> oddsA( List<Integer> L )
+    {
+      List<Integer> L0 = new ArrayList<>();
+      for (int i : L) {
+        if (i % 2 != 0) {
+          L0.add(i);
+        }
+      }
+	     return L0;
     }
 
     //explicitly using an iterator
     //returns a list containing the odd numbers in L
-    public static List<Integer> oddsB( List<Integer> L ) 
-    { 
+    public static List<Integer> oddsB( List<Integer> L )
+    {
     	List<Integer> L0 = L;
 	Iterator<Integer> it = L0.iterator();
 
@@ -65,8 +70,8 @@ public class ItrWorkAL
 
     //explicitly using an iterator
     //modifies L s.t. it contains no evens
-    public static void removeEvens( List<Integer> L ) 
-    { 
+    public static void removeEvens( List<Integer> L )
+    {
     	List<Integer> L0 = L;
 	Iterator<Integer> it = L0.iterator();
 
@@ -80,9 +85,9 @@ public class ItrWorkAL
     }
 
 
-    public static void main( String [] args ) 
+    public static void main( String [] args )
     {
-	//var type: List   obj type: ArrayList	
+	//var type: List   obj type: ArrayList
 	List<Integer> L = new ArrayList<Integer>();
 
 	for( int i = 0; i < 10; i++ )
@@ -124,4 +129,3 @@ public class ItrWorkAL
     }//end main
 
 }//end class ItrWork
-
