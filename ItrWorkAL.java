@@ -42,7 +42,7 @@ public class ItrWorkAL
     //returns a list containing the odd numbers in L
     public static List<Integer> oddsA( List<Integer> L )
     {
-      List<Integer> L0 = new ArrayList<>();
+      List<Integer> L0 = new ArrayList<Integer>();
       for (int i : L) {
         if (i % 2 != 0) {
           L0.add(i);
@@ -55,16 +55,16 @@ public class ItrWorkAL
     //returns a list containing the odd numbers in L
     public static List<Integer> oddsB( List<Integer> L )
     {
-    	List<Integer> L0 = L;
-	Iterator<Integer> it = L0.iterator();
+    	List<Integer> L1 = new ArrayList<Integer>();
+	Iterator<Integer> it = L.iterator();
 
 	while(it.hasNext()){
 		Integer i = it.next();
 		if(i % 2 != 0){
-			it.remove();
+			L1.add(i);
 		}
 	}
-	return L0;
+	return L1;
     }
 
 
@@ -111,11 +111,11 @@ public class ItrWorkAL
 	System.out.println("9 in L? -> " + foundB(9,L) );
 	System.out.println("13 in L? -> " + foundB(13,L) );
 
-/*
+
 	System.out.println("\nTesting oddsA...");
 	List<Integer> A = oddsA(L);
 	for( int n : A ) System.out.println(n);
-*/
+
 	System.out.println("\nTesting oddsB...");
 	List<Integer> B = oddsB(L);
 	for( int n : B ) System.out.println(n);
